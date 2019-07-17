@@ -41,6 +41,7 @@ gem 'simple_form'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick', '~> 4.8'
+gem "simple_calendar", "~> 2.0"
 
 
 group :development, :test do

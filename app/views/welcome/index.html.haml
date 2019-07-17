@@ -1,3 +1,14 @@
 %h1 Welcome#index
 %p Find me in app/views/welcome/index.html.erb
 = link_to 'Products', products_path
+= link_to 'Menu',  menus_path
+= link_to 'Categoru', categories_path
+
+
+
+= week_calendar events: @menus do |date, menus|
+  = date
+  / = menus
+  - menus.each do |menu|
+    %div
+      = link_to menu.name,  menu_path(menu.id)

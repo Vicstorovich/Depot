@@ -1,23 +1,14 @@
-= simple_form_for(@product, html: { class: 'form-inline' }) do |form|
-  - if product.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(product.errors.count, "error")
-        prohibited this product from being saved:
-      %ul
-        - product.errors.full_messages.each do |message|
-          %li= message
+= simple_form_for(product, html: { class: 'form-inline' }) do |form|
+  / = render "shared/errors", resource: product
   .field
     = form.input :title
-    / = form.text_field :title
   .field
     = form.input :description
-    / = form.text_area :description
   .field
     = form.input :image
-    / = form.text_field :image
   .field
     = form.input :price
-    / = form.text_field :price
+  .field
+    = form.collection_select :category_id, Category.all, :id, :title, prompt: true
   .actions
     = form.submit
