@@ -1,5 +1,3 @@
 class WelcomeController < ApplicationController
-  def index
-    @menus = Menu.all
-  end
+  def index; end
 end
