@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   resources :line_items
   resources :carts
   root to: 'welcome#index'
