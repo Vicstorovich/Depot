@@ -43,6 +43,7 @@ gem 'carrierwave'
 gem 'mini_magick', '~> 4.8'
 gem "simple_calendar", "~> 2.0"
 gem 'bootstrap-sass' ,  '3.3.7'
+gem 'autoprefixer-rails'
 # gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 

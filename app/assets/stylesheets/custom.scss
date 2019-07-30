@@ -1,7 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// .container {
+//   height: 50vh;
+// }
 
+.super{
+  padding-left: 2%;
+  padding-right: 2%;
+}
 
 /* mixins, variables, etc. */
 
@@ -74,17 +81,20 @@ p {
 
 footer {
   margin-top: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: 3px solid #eaeaea;
   color: #777;
+  background-color:#333;
 }
 
 footer a {
-  color: #555;
+  color: #777;
 }
 
 footer a:hover {
-  color: #222;
+  color: #fff;
 }
 
 footer small {
