@@ -7,10 +7,13 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = render 'shared/shim'
   %body
     = render 'shared/header'
     .container
       %div{class: "#{controller.controller_name}"}
-        %p#notice= notice
+        - flash.each do |message_type, message|
+          %div{:class => "alert alert-#{message_type}"}= message
+
         = yield
       = render 'shared/footer'

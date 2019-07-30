@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
-  get 'users/new'
+
+  post :signup,  to: 'users#create'
+  get :signup, to: 'users#new'
+  get :about, to: 'welcome#about'
+  get :contact, to: 'welcome#contact'
+  get :home, to: 'welcome#home'
+  get    :login,   to: 'sessions#new'
+  post   :login,   to: 'sessions#create'
+  delete :logout,  to: 'sessions#destroy'
+
+  get :signup, to: "registrations#new"
+
   resources :line_items
   resources :carts
   root to: 'welcome#index'
@@ -10,7 +21,7 @@ Rails.application.routes.draw do
   end
   resources :categories
   resources :products
-
+  resources :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

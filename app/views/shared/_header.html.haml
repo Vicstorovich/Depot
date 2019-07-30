@@ -1,8 +1,64 @@
 %header.navbar.navbar-fixed-top.navbar-inverse
   .container
-    = link_to "sample app", '#', id: "logo"
+    = link_to "Depot", root_path, id: "logo"
     %nav
       %ul.nav.navbar-nav.navbar-right
         %li= link_to "Home", '#'
         %li= link_to "Help", '#'
         %li= link_to "Log in", '#'
+        %li= link_to "Home", '#'
+        %li= link_to "Help", '#'
+        %li= link_to "Log in", '#'
+
+%nav.navbar.navbar-default.navbar-static
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => ".js-navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#", :style => "padding:15px 15px;"} Название проекта
+    .collapse.navbar-collapse.js-navbar
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => "#"} Главная
+        %li.dropdown
+          %a#drop1.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Меню
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Текст подпункта
+            %li
+              %a{:href => "#"} Текст подпункта
+            %li.divider
+            %li
+              %a{:href => "#"} Текст подпункта
+        %li.dropdown
+          %a#drop1.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Меню
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Текст подпункта
+            %li
+              %a{:href => "#"} Текст подпункта
+            %li.divider
+            %li
+              %a{:href => "#"} Текст подпункта
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          %a#drop1.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Меню
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Текст подпункта
+            %li
+              %a{:href => "#"} Текст подпункта
+            %li.divider
+            %li
+              %a{:href => "#"} Текст подпункта
+
+
